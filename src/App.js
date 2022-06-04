@@ -1,24 +1,45 @@
 import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './component/navbar';
+import Profile from './component/profile';
+import About from './component/about';
+import Footer from './component/footer';
+import Info from './component/info';
+import Skills from './component/skills';
+import Education from './component/education';
+import 'materialize-css/dist/css/materialize.min.css';
+/*import img from './images/profile.jpeg';
+import * as ReactBootStrap from "react-bootstrap";*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    /*<>
+    <div className='app'>
+      <img src={img}></img>
+    </div>*/
+    <>
+    
+    
+    <section>
+      <Navbar/>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-3">
+
+           <Profile/>
+          </div>
+          <div className="col-sm-9">
+           <About/>
+           <Info/>
+           <Skills/>
+           <Education />
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    </>    
   );
 }
 
